@@ -1,0 +1,23 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" role="img" aria-label="Albums community topic art">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A1730"/><stop offset="0.5" stop-color="#0f3b5c"/><stop offset="1" stop-color="#07111F"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="200" fill="url(#g)"/>
+  <g transform="translate(60,100)">
+    <rect x="-40" y="-55" width="80" height="110" rx="10" fill="#EAF6FF"/>
+    <circle cx="0" cy="-20" r="20" fill="#38BDF8"/>
+    <text x="0" y="36" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0f3b5c">ALBUMS</text>
+  </g>
+  <g transform="translate(150,95)">
+    <rect x="-40" y="-55" width="80" height="110" rx="10" fill="#7DD3FC" opacity="0.9"/>
+    <circle cx="0" cy="-20" r="20" fill="#EAF6FF"/>
+    <text x="0" y="36" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0f3b5c">MUSIC</text>
+  </g>
+  <g transform="translate(240,100)">
+    <rect x="-40" y="-55" width="80" height="110" rx="10" fill="#E0F2FE"/>
+    <circle cx="0" cy="-20" r="20" fill="#38BDF8"/>
+    <text x="0" y="36" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0f3b5c">TRACKS</text>
+  </g>
+</svg>

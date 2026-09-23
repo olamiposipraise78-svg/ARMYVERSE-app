@@ -1,0 +1,641 @@
+[
+  {
+    "id": "q001",
+    "category": "members",
+    "difficulty": "easy",
+    "question": "What is the name of BTS's leader?",
+    "options": ["Jin", "RM", "SUGA", "j-hope"],
+    "correctIndex": 1,
+    "funFact": "RM (Kim Namjoon) has been the leader of BTS since their debut in 2013."
+  },
+  {
+    "id": "q002",
+    "category": "members",
+    "difficulty": "easy",
+    "question": "Which BTS member is known as the 'Golden Maknae'?",
+    "options": ["Jimin", "V", "Jung Kook", "Jin"],
+    "correctIndex": 2,
+    "funFact": "Jung Kook is the youngest member (maknae) and is called the 'Golden Maknae' because he excels at everything."
+  },
+  {
+    "id": "q003",
+    "category": "members",
+    "difficulty": "easy",
+    "question": "What is SUGA's real name?",
+    "options": ["Kim Taehyung", "Park Jimin", "Min Yoongi", "Jung Hoseok"],
+    "correctIndex": 2,
+    "funFact": "SUGA's real name is Min Yoongi. He was born on March 9, 1993, in Daegu, South Korea."
+  },
+  {
+    "id": "q004",
+    "category": "members",
+    "difficulty": "easy",
+    "question": "How many members are in BTS?",
+    "options": ["5", "6", "7", "8"],
+    "correctIndex": 2,
+    "funFact": "BTS has 7 members: RM, Jin, SUGA, j-hope, Jimin, V, and Jung Kook."
+  },
+  {
+    "id": "q005",
+    "category": "songs",
+    "difficulty": "easy",
+    "question": "Which BTS song features the lyrics 'Dynamite' in its title?",
+    "options": ["Butter", "Dynamite", "Permission to Dance", "Life Goes On"],
+    "correctIndex": 1,
+    "funFact": "Dynamite (2020) was BTS's first all-English single and debuted at #1 on the Billboard Hot 100."
+  },
+  {
+    "id": "q006",
+    "category": "songs",
+    "difficulty": "easy",
+    "question": "What was BTS's debut single album in 2013?",
+    "options": ["Dark & Wild", "2 Cool 4 Skool", "O!RUL8,2?", "Skool Luv Affair"],
+    "correctIndex": 1,
+    "funFact": "2 Cool 4 Skool was released on June 12, 2013, marking BTS's official debut."
+  },
+  {
+    "id": "q007",
+    "category": "members",
+    "difficulty": "medium",
+    "question": "Which BTS member was born in Ilsan, South Korea?",
+    "options": ["RM", "Jin", "V", "Jimin"],
+    "correctIndex": 0,
+    "funFact": "RM (Kim Namjoon) was born on September 12, 1994, in Ilsan, Gyeonggi Province."
+  },
+  {
+    "id": "q008",
+    "category": "members",
+    "difficulty": "medium",
+    "question": "Which member studied at the Seoul Institute of the Arts?",
+    "options": ["V", "Jimin", "Jung Kook", "j-hope"],
+    "correctIndex": 1,
+    "funFact": "Jimin studied contemporary dance at the Seoul Institute of the Arts before joining BTS."
+  },
+  {
+    "id": "q009",
+    "category": "albums",
+    "difficulty": "medium",
+    "question": "Which BTS album contains the song 'Spring Day'?",
+    "options": ["Wings", "You Never Walk Alone", "Love Yourself: Her", "Map of the Soul: Persona"],
+    "correctIndex": 1,
+    "funFact": "You Never Walk Alone (2017) is a repackaged version of Wings and includes Spring Day."
+  },
+  {
+    "id": "q010",
+    "category": "albums",
+    "difficulty": "easy",
+    "question": "What is the name of BTS's first studio album (Korean)?",
+    "options": ["Dark & Wild", "2 Cool 4 Skool", "Skool Luv Affair", "O!RUL8,2?"],
+    "correctIndex": 0,
+    "funFact": "Dark & Wild (2014) was BTS's first full-length Korean studio album."
+  },
+  {
+    "id": "q011",
+    "category": "eras",
+    "difficulty": "medium",
+    "question": "What is the first era in the 'Love Yourself' series?",
+    "options": ["Love Yourself: Tear", "Love Yourself: Her", "Love Yourself: Answer", "Love Yourself: Wonder"],
+    "correctIndex": 1,
+    "funFact": "Love Yourself: Her (2017) was the first installment in the Love Yourself series."
+  },
+  {
+    "id": "q012",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "In what year did BTS debut?",
+    "options": ["2011", "2012", "2013", "2014"],
+    "correctIndex": 2,
+    "funFact": "BTS debuted on June 12, 2013, under Big Hit Entertainment (now HYBE)."
+  },
+  {
+    "id": "q013",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which BTS song was the first K-pop song to top the Billboard Hot 100?",
+    "options": ["Dynamite", "Boy With Luv", "Life Goes On", "Butter"],
+    "correctIndex": 2,
+    "funFact": "Life Goes On (December 2020) became the first Korean-language song to top the Billboard Hot 100."
+  },
+  {
+    "id": "q014",
+    "category": "army",
+    "difficulty": "easy",
+    "question": "What does 'ARMY' stand for in the BTS fandom?",
+    "options": ["Adorable Representative M.C. for Youth", "Always Remember Members Youthful", "Amazing Radiant Members for Youth", "Army of Radiant Members Youth"],
+    "correctIndex": 0,
+    "funFact": "ARMY stands for 'Adorable Representative M.C. for Youth' — the official name of the BTS fandom."
+  },
+  {
+    "id": "q015",
+    "category": "army",
+    "difficulty": "easy",
+    "question": "What color is the official BTS lightstick?",
+    "options": ["Pink", "Purple", "Blue", "White"],
+    "correctIndex": 1,
+    "funFact": "The official BTS lightstick, called the ARMY Bomb, glows purple — symbolizing 'I purple you' (Borahae)."
+  },
+  {
+    "id": "q016",
+    "category": "members",
+    "difficulty": "medium",
+    "question": "Which BTS member is from Busan, South Korea?",
+    "options": ["RM", "Jung Kook", "Jimin", "V"],
+    "correctIndex": 2,
+    "funFact": "Jimin was born on October 13, 1995, in Busan, South Korea."
+  },
+  {
+    "id": "q017",
+    "category": "members",
+    "difficulty": "hard",
+    "question": "Which BTS member attended Global Cyber University?",
+    "options": ["Jin", "SUGA", "RM", "V"],
+    "correctIndex": 0,
+    "funFact": "Jin (Kim Seokjin) graduated from Global Cyber University with a degree in Film Studies."
+  },
+  {
+    "id": "q018",
+    "category": "songs",
+    "difficulty": "medium",
+    "question": "Which BTS song was inspired by the story of Icarus?",
+    "options": ["Fire", "Save Me", "Not Today", "Awake"],
+    "correctIndex": 2,
+    "funFact": "Not Today (2017) draws inspiration from the Icarus myth and themes of perseverance."
+  },
+  {
+    "id": "q019",
+    "category": "songs",
+    "difficulty": "hard",
+    "question": "What year was 'Blood Sweat & Tears' released?",
+    "options": ["2015", "2016", "2017", "2018"],
+    "correctIndex": 1,
+    "funFact": "Blood Sweat & Tears was released on October 10, 2016, as part of the Wings album."
+  },
+  {
+    "id": "q020",
+    "category": "albums",
+    "difficulty": "medium",
+    "question": "Which album features the song 'Fake Love'?",
+    "options": ["Love Yourself: Tear", "Love Yourself: Her", "Map of the Soul: Persona", "Wings"],
+    "correctIndex": 0,
+    "funFact": "Fake Love (2018) was the lead single from Love Yourself: Tear."
+  },
+  {
+    "id": "q021",
+    "category": "albums",
+    "difficulty": "hard",
+    "question": "What is the best-selling album in South Korean history (as of 2023)?",
+    "options": ["Map of the Soul: Persona", "Proof", "Butter", "Love Yourself: Answer"],
+    "correctIndex": 1,
+    "funFact": "Proof (2022), BTS's anthology album, became the best-selling album in South Korean history."
+  },
+  {
+    "id": "q022",
+    "category": "eras",
+    "difficulty": "easy",
+    "question": "What is the name of BTS's school-themed era?",
+    "options": ["Dark era", "School trilogy", "Love Yourself era", "Map of the Soul era"],
+    "correctIndex": 1,
+    "funFact": "The School Trilogy (2013-2014) includes 2 Cool 4 Skool, O!RUL8,2?, and Skool Luv Affair."
+  },
+  {
+    "id": "q023",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "In which city did BTS hold their first stadium concert?",
+    "options": ["Seoul", "Los Angeles", "London", "New York"],
+    "correctIndex": 1,
+    "funFact": "BTS's first stadium concert was at the Rose Bowl in Los Angeles during the Love Yourself: Speak Yourself tour (2019)."
+  },
+  {
+    "id": "q024",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "BTS spoke at which United Nations event?",
+    "options": ["World Health Assembly", "UN General Assembly", "UNESCO Conference", "UNICEF Summit"],
+    "correctIndex": 1,
+    "funFact": "BTS spoke at the 73rd UN General Assembly in September 2018 as part of UNICEF's 'Love Myself' campaign."
+  },
+  {
+    "id": "q025",
+    "category": "army",
+    "difficulty": "medium",
+    "question": "What is the name of BTS's official fan club membership?",
+    "options": ["ARMY Membership", "ARMY Bomb", "ARMY Universe", "ARMY Plus"],
+    "correctIndex": 0,
+    "funFact": "The official BTS fan club membership is simply called 'ARMY Membership,' managed through Weverse."
+  },
+  {
+    "id": "q026",
+    "category": "members",
+    "difficulty": "easy",
+    "question": "What is V's real name?",
+    "options": ["Kim Namjoon", "Kim Seokjin", "Kim Taehyung", "Park Jimin"],
+    "correctIndex": 2,
+    "funFact": "V's real name is Kim Taehyung. He was born on December 30, 1995."
+  },
+  {
+    "id": "q027",
+    "category": "members",
+    "difficulty": "easy",
+    "question": "Who is the oldest member of BTS?",
+    "options": ["RM", "Jin", "SUGA", "V"],
+    "correctIndex": 1,
+    "funFact": "Jin (Kim Seokjin) is the oldest member, born on December 4, 1992."
+  },
+  {
+    "id": "q028",
+    "category": "songs",
+    "difficulty": "easy",
+    "question": "Which BTS song includes the phrase 'I love myself'?",
+    "options": ["DNA", "IDOL", "Fake Love", "Answer: Love Myself"],
+    "correctIndex": 3,
+    "funFact": "Answer: Love Myself (2018) is an English version of 'Answer: Love Myself' from the Love Yourself: Answer album."
+  },
+  {
+    "id": "q029",
+    "category": "songs",
+    "difficulty": "medium",
+    "question": "What is the name of the sub-unit that includes RM, SUGA, and j-hope?",
+    "options": ["Vocal Line", "Dance Line", "Rap Line", "Performance Line"],
+    "correctIndex": 2,
+    "funFact": "The Rap Line consists of RM, SUGA, and j-hope — BTS's three rappers."
+  },
+  {
+    "id": "q030",
+    "category": "albums",
+    "difficulty": "easy",
+    "question": "What is the name of BTS's first Japanese studio album?",
+    "options": ["Wake Up", "Dark & Wild", "Youth", "Face Yourself"],
+    "correctIndex": 0,
+    "funFact": "Wake Up (2014) was BTS's first full-length Japanese studio album."
+  },
+  {
+    "id": "q031",
+    "category": "eras",
+    "difficulty": "hard",
+    "question": "Which era marked BTS's transition to social commentary themes?",
+    "options": ["School trilogy", "Most Beautiful Moment in Life", "Wings", "Love Yourself"],
+    "correctIndex": 2,
+    "funFact": "The Wings era (2016-2017) explored deeper themes of temptation, loss of innocence, and personal growth."
+  },
+  {
+    "id": "q032",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "What company manages BTS?",
+    "options": ["SM Entertainment", "JYP Entertainment", "HYBE", "YG Entertainment"],
+    "correctIndex": 2,
+    "funFact": "BTS is managed by HYBE (formerly Big Hit Entertainment), founded by Bang Si-hyuk."
+  },
+  {
+    "id": "q033",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Which award show did BTS first win a Daesang (Grand Prize) at?",
+    "options": ["MAMA", "Golden Disc Awards", "Seoul Music Awards", "Melon Music Awards"],
+    "correctIndex": 2,
+    "funFact": "BTS won their first Daesang at the 26th Seoul Music Awards in January 2017."
+  },
+  {
+    "id": "q034",
+    "category": "army",
+    "difficulty": "medium",
+    "question": "What does 'Borahae' mean?",
+    "options": ["I love you", "I purple you", "I miss you", "I believe in you"],
+    "correctIndex": 1,
+    "funFact": "'Borahae' (보라해) means 'I purple you' and was coined by V during a fan event in 2016."
+  },
+  {
+    "id": "q035",
+    "category": "members",
+    "difficulty": "medium",
+    "question": "Which member is known for his love of photography?",
+    "options": ["Jung Kook", "V", "Jin", "Jimin"],
+    "correctIndex": 0,
+    "funFact": "Jung Kook is known for his passion for photography and has shared many photos taken with film cameras."
+  },
+  {
+    "id": "q036",
+    "category": "songs",
+    "difficulty": "hard",
+    "question": "Which BTS song features a collaboration with Halsey?",
+    "options": ["Boy With Luv", "Make It Right", "Suga's Interlude", "All of the above"],
+    "correctIndex": 3,
+    "funFact": "Halsey collaborated with BTS on 'Boy With Luv' (2019), 'Make It Right' (2019), and 'Suga's Interlude' (2019)."
+  },
+  {
+    "id": "q037",
+    "category": "albums",
+    "difficulty": "medium",
+    "question": "What is the name of BTS's self-titled debut Japanese album?",
+    "options": ["Wake Up", "Youth", "BTS", "For You"],
+    "correctIndex": 2,
+    "funFact": "BTS's self-titled Japanese album was released in December 2014."
+  },
+  {
+    "id": "q038",
+    "category": "eras",
+    "difficulty": "medium",
+    "question": "What color theme is associated with the 'Map of the Soul' era?",
+    "options": ["Blue and purple", "Black and gold", "Pink and white", "Red and black"],
+    "correctIndex": 1,
+    "funFact": "The Map of the Soul era featured black and gold as its primary visual themes."
+  },
+  {
+    "id": "q039",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "BTS's 'Permission to Dance' was released in collaboration with which organization?",
+    "options": ["UNICEF", "UN", "YouTube", "Spotify"],
+    "correctIndex": 2,
+    "funFact": "Permission to Dance was released in partnership with YouTube as a YouTube exclusive initially."
+  },
+  {
+    "id": "q040",
+    "category": "army",
+    "difficulty": "hard",
+    "question": "What is the name of the official BTS mobile game featuring storylines?",
+    "options": ["BTS World", "BTS Universe", "BTS Story", "BTS Adventure"],
+    "correctIndex": 0,
+    "funFact": "BTS World (2019) is a mobile game where players take on the role of BTS's manager."
+  },
+  {
+    "id": "q041",
+    "category": "members",
+    "difficulty": "hard",
+    "question": "Which member has a younger brother named Jeon Jungkook? (Trick question — this is about which member's sibling?)",
+    "options": ["Jimin", "Jung Kook himself", "V", "RM"],
+    "correctIndex": 1,
+    "funFact": "Jung Kook doesn't have a younger brother — he IS the younger brother. He has an older brother named Jeon Junghyun."
+  },
+  {
+    "id": "q042",
+    "category": "songs",
+    "difficulty": "medium",
+    "question": "What is the name of BTS's song that won the 2020 Melon Music Award for Song of the Year?",
+    "options": ["Dynamite", "Life Goes On", "Boy With Luv", "Spring Day"],
+    "correctIndex": 1,
+    "funFact": "Life Goes On won Song of the Year at the 2020 Melon Music Awards."
+  },
+  {
+    "id": "q043",
+    "category": "albums",
+    "difficulty": "hard",
+    "question": "How many tracks are on the 'Proof' anthology album (CD1)?",
+    "options": ["10", "12", "14", "16"],
+    "correctIndex": 1,
+    "funFact": "CD1 of Proof contains 12 tracks, featuring BTS's biggest hits from 2013 to 2022."
+  },
+  {
+    "id": "q044",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "What is the name of BTS's record label founder?",
+    "options": ["Lee Soo-man", "Park Jin-young", "Bang Si-hyuk", "Yang Hyun-suk"],
+    "correctIndex": 2,
+    "funFact": "Bang Si-hyuk (Hitman Bang) founded Big Hit Entertainment (now HYBE) in 2005."
+  },
+  {
+    "id": "q045",
+    "category": "army",
+    "difficulty": "easy",
+    "question": "What date is celebrated as BTS's debut anniversary?",
+    "options": ["June 12", "July 12", "August 12", "September 12"],
+    "correctIndex": 0,
+    "funFact": "BTS debuted on June 12, 2013. This date is celebrated annually by ARMY as BTS Festa."
+  },
+  {
+    "id": "q046",
+    "category": "members",
+    "difficulty": "medium",
+    "question": "Which member released the solo mixtape 'Agust D'?",
+    "options": ["RM", "SUGA", "j-hope", "Jin"],
+    "correctIndex": 1,
+    "funFact": "SUGA released his solo mixtape 'Agust D' in August 2016 under his alter ego."
+  },
+  {
+    "id": "q047",
+    "category": "songs",
+    "difficulty": "easy",
+    "question": "Which BTS song has the most streams on Spotify (as of 2023)?",
+    "options": ["Dynamite", "Boy With Luv", "Butter", "Spring Day"],
+    "correctIndex": 0,
+    "funFact": "Dynamite is BTS's most-streamed song on Spotify with over 1.5 billion streams."
+  },
+  {
+    "id": "q048",
+    "category": "eras",
+    "difficulty": "easy",
+    "question": "What is the name of the era that included the song 'DNA'?",
+    "options": ["Wings", "Love Yourself: Her", "Dark & Wild", "Most Beautiful Moment in Life"],
+    "correctIndex": 1,
+    "funFact": "DNA was the lead single from Love Yourself: Her (2017), marking BTS's breakthrough into Western markets."
+  },
+  {
+    "id": "q049",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "BTS was the first K-pop group to perform at which major US music festival?",
+    "options": ["Coachella", "Lollapalooza", "Bonnaroo", "South by Southwest"],
+    "correctIndex": 1,
+    "funFact": "BTS headlined Lollapalooza 2022, making them the first K-pop group to headline a major US music festival."
+  },
+  {
+    "id": "q050",
+    "category": "army",
+    "difficulty": "medium",
+    "question": "What is the name of BTS's official community platform?",
+    "options": ["Weverse", "V Live", "Bubble", "Fancafe"],
+    "correctIndex": 0,
+    "funFact": "Weverse is HYBE's official community platform where BTS interacts with ARMY."
+  },
+  {
+    "id": "q051",
+    "category": "members",
+    "difficulty": "hard",
+    "question": "Which member composed the BTS song 'Tomorrow'?",
+    "options": ["RM", "SUGA", "j-hope", "Jin"],
+    "correctIndex": 1,
+    "funFact": "SUGA composed 'Tomorrow' with Slow Rabbit and RM. It was featured on the Skool Luv Affair album."
+  },
+  {
+    "id": "q052",
+    "category": "songs",
+    "difficulty": "hard",
+    "question": "What was the first song BTS performed at the Grammy Awards?",
+    "options": ["Dynamite", "Butter", "Boy With Luv", "Permission to Dance"],
+    "correctIndex": 0,
+    "funFact": "BTS performed 'Dynamite' at the 63rd Grammy Awards in March 2021."
+  },
+  {
+    "id": "q053",
+    "category": "albums",
+    "difficulty": "easy",
+    "question": "What is the title of BTS's fifth studio album, released March 20, 2026?",
+    "options": ["Echo", "GOLDEN", "ARIRANG", "Happy"],
+    "correctIndex": 2,
+    "funFact": "ARIRANG is BTS's first studio album after all seven members completed their military service and reunited."
+  },
+  {
+    "id": "q054",
+    "category": "songs",
+    "difficulty": "medium",
+    "question": "Which song is the title track of BTS's 2026 album ARIRANG?",
+    "options": ["Body to Body", "SWIM", "2.0", "Into the Sun"],
+    "correctIndex": 1,
+    "funFact": "'SWIM' leads the fourteen-track ARIRANG album, released March 20, 2026."
+  },
+  {
+    "id": "q055",
+    "category": "songs",
+    "difficulty": "easy",
+    "question": "What was BTS's digital single released for their 10th anniversary on June 9, 2023?",
+    "options": ["Yet To Come", "Take Two", "Run BTS", "For Youth"],
+    "correctIndex": 1,
+    "funFact": "'Take Two' is BTS's 10th-anniversary thank-you song for ARMY."
+  },
+  {
+    "id": "q056",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which BTS member was the first to enlist for military service in December 2022?",
+    "options": ["j-hope", "RM", "Jin", "SUGA"],
+    "correctIndex": 2,
+    "funFact": "Jin enlisted in December 2022, beginning the members' military service era."
+  },
+  {
+    "id": "q057",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Who was the last BTS member to complete military service, discharged on June 21, 2025?",
+    "options": ["RM", "V", "SUGA", "Jimin"],
+    "correctIndex": 2,
+    "funFact": "SUGA, who served as a social service agent, was the last member discharged — completing the group's reunion on June 21, 2025."
+  },
+  {
+    "id": "q058",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "On which date did BTS officially announce their full-group reunion?",
+    "options": ["June 10, 2025", "July 1, 2025", "August 21, 2025", "September 1, 2025"],
+    "correctIndex": 1,
+    "funFact": "BTS announced the reunion on July 1, 2025 via a live Weverse broadcast, revealing a new album and world tour for spring 2026."
+  },
+  {
+    "id": "q059",
+    "category": "songs",
+    "difficulty": "medium",
+    "question": "Which BTS single followed the ARIRANG album on June 12, 2026?",
+    "options": ["Come Over", "Take Two", "SWIM", "One More Night"],
+    "correctIndex": 0,
+    "funFact": "'Come Over' was BTS's single released after the ARIRANG album in June 2026."
+  },
+  {
+    "id": "q060",
+    "category": "albums",
+    "difficulty": "medium",
+    "question": "What was Jimin's solo debut EP, released March 24, 2023?",
+    "options": ["MUSE", "FACE", "Layover", "GOLDEN"],
+    "correctIndex": 1,
+    "funFact": "FACE featured the title track 'Like Crazy,' which peaked at #1 on the Billboard Hot 100."
+  },
+  {
+    "id": "q061",
+    "category": "songs",
+    "difficulty": "medium",
+    "question": "Which song is the title track of Jimin's 2024 album MUSE?",
+    "options": ["Who", "Smeraldo Garden Marching Band", "Closer Than This", "Set Me Free Pt.2"],
+    "correctIndex": 0,
+    "funFact": "'Who' is the lead single from MUSE (July 19, 2024)."
+  },
+  {
+    "id": "q062",
+    "category": "albums",
+    "difficulty": "medium",
+    "question": "What is the title of SUGA's final Agust D studio album, released April 21, 2023?",
+    "options": ["D-2", "D-DAY", "Agust D", "Amygdala"],
+    "correctIndex": 1,
+    "funFact": "D-DAY concludes SUGA's Agust D trilogy, which began in 2016 and continued with D-2 in 2020."
+  },
+  {
+    "id": "q063",
+    "category": "albums",
+    "difficulty": "easy",
+    "question": "Which album is V's solo debut, released September 8, 2023?",
+    "options": ["Happy", "Layover", "Right Place, Wrong Person", "Hope on the Street Vol.1"],
+    "correctIndex": 1,
+    "funFact": "Layover is led by the title track 'Slow Dancing' and includes fan favorites like 'Rainy Days' and 'Blue.'"
+  },
+  {
+    "id": "q064",
+    "category": "albums",
+    "difficulty": "easy",
+    "question": "What is the name of Jung Kook's debut solo album, released November 3, 2023?",
+    "options": ["GOLDEN", "FACE", "BE", "Dynamite"],
+    "correctIndex": 0,
+    "funFact": "GOLDEN features the global hits 'Seven' and 'Standing Next to You.'"
+  },
+  {
+    "id": "q065",
+    "category": "songs",
+    "difficulty": "medium",
+    "question": "Which 2023 j-hope single was a collaboration with J. Cole?",
+    "options": ["Sweet Dreams", "on the street", "Killin' It Girl", "MONA LISA"],
+    "correctIndex": 1,
+    "funFact": "'on the street' (March 3, 2023) was j-hope's solo single with J. Cole, released ahead of his enlistment."
+  },
+  {
+    "id": "q066",
+    "category": "albums",
+    "difficulty": "medium",
+    "question": "What is the title of Jin's 2024 solo EP featuring 'I'll Be There' and 'Running Wild'?",
+    "options": ["Echo", "Happy", "The Astronaut", "Super Tuna"],
+    "correctIndex": 1,
+    "funFact": "Happy (November 15, 2024) was Jin's first solo album, released just after his military discharge."
+  },
+  {
+    "id": "q067",
+    "category": "albums",
+    "difficulty": "hard",
+    "question": "What is the name of Jin's 2025 solo album, released May 16, 2025?",
+    "options": ["Happy", "Echo", "Beautiful Life", "Running Wild"],
+    "correctIndex": 1,
+    "funFact": "Echo (May 16, 2025) is Jin's sophomore solo album."
+  },
+  {
+    "id": "q068",
+    "category": "albums",
+    "difficulty": "medium",
+    "question": "Which 2024 album is RM's solo release exploring identity and self-discovery?",
+    "options": ["Mono", "Right Place, Wrong Person", "Indigo", "Hope World"],
+    "correctIndex": 1,
+    "funFact": "Right Place, Wrong Person (May 24, 2024) features the lead singles 'Come back to me' and 'Nuts.'"
+  },
+  {
+    "id": "q069",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Which member released 'Hope on the Street Vol.1' in February 2024 during his military service?",
+    "options": ["j-hope", "RM", "V", "Jin"],
+    "correctIndex": 0,
+    "funFact": "j-hope released Hope on the Street Vol.1 on February 29, 2024, while serving in the military."
+  },
+  {
+    "id": "q070",
+    "category": "songs",
+    "difficulty": "medium",
+    "question": "What is V's 2024 pop single about friends who become something more?",
+    "options": ["FRI(END)S", "Winter Ahead", "Slow Dancing", "Love Me Again"],
+    "correctIndex": 0,
+    "funFact": "'FRI(END)S' (March 15, 2024) was V's first English-language single."
+  },
+  {
+    "id": "q071",
+    "category": "songs",
+    "difficulty": "hard",
+    "question": "Which 2024 duet is V's Christmas collaboration with PARK HYO SHIN?",
+    "options": ["White Christmas", "Winter Ahead", "Snow Flower", "Let It Snow"],
+    "correctIndex": 1,
+    "funFact": "'Winter Ahead' (November 29, 2024) is a bilingual jazz-pop duet with PARK HYO SHIN."
+  }
+]

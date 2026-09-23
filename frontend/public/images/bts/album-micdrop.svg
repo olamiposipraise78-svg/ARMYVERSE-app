@@ -1,0 +1,21 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Mic Drop remix single cover art by BTS">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A1730"/><stop offset="0.6" stop-color="#0f3b5c"/><stop offset="1" stop-color="#07111F"/>
+    </linearGradient>
+    <radialGradient id="r" cx=".5" cy=".4" r=".6"><stop offset="0" stop-color="#67E8F9" stop-opacity=".7"/><stop offset="1" stop-color="#0A1730" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#g)"/>
+  <rect width="400" height="400" fill="url(#r)"/>
+  <g transform="translate(200,190)" fill="none" stroke="#A5D8F5" stroke-width="5">
+    <path d="M0 130v40" stroke="#ffffff"/>
+    <ellipse cx="0" cy="-60" rx="46" ry="78"/>
+    <path d="M-66-70h132" stroke-linecap="round"/>
+    <path d="M-56-34h112" stroke-linecap="round" stroke-width="3"/>
+  </g>
+  <circle cx="200" cy="130" r="30" fill="#38BDF8"/>
+  <path d="M186 118l14 8 14-8 6 26h-40z" fill="#ffffff"/>
+  <text x="200" y="300" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="34" font-weight="800" letter-spacing="2" fill="#ffffff">MIC DROP</text>
+  <text x="200" y="332" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="600" letter-spacing="5" fill="#67E8F9">STEVE AOKI REMIX</text>
+  <text x="200" y="360" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="600" letter-spacing="4" fill="#7DD3FC">BTS x DESIIGNER</text>
+</svg>

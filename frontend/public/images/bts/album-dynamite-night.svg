@@ -1,0 +1,22 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Dynamite NightTime Version cover art by BTS">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0D1930"/><stop offset="0.5" stop-color="#0f3b5c"/><stop offset="1" stop-color="#07111F"/>
+    </linearGradient>
+    <radialGradient id="r" cx=".5" cy=".4" r=".6"><stop offset="0" stop-color="#38BDF8" stop-opacity=".9"/><stop offset="1" stop-color="#0A1730" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#g)"/>
+  <rect width="400" height="400" fill="url(#r)"/>
+  <g fill="#7DD3FC" opacity="0.7">
+    <circle cx="50" cy="60" r="2"/><circle cx="340" cy="50" r="3"/><circle cx="80" cy="330" r="2"/>
+    <circle cx="320" cy="300" r="2"/><circle cx="180" cy="40" r="2"/><circle cx="60" cy="200" r="2"/>
+    <circle cx="350" cy="140" r="2"/>
+  </g>
+  <g transform="translate(200,190)">
+    <circle r="120" fill="none" stroke="#EAF6FF" stroke-opacity="0.5" stroke-width="4"/>
+    <path d="M0-80c10 40 26 66 50 82-24 8-60 28-90 30-6-34 0-66 16-96l24 32 0-48z" fill="#EAF6FF" opacity="0.9"/>
+    <path d="M40-70c10 30 26 50 48 62" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8"/>
+  </g>
+  <text x="200" y="58" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="30" font-weight="800" letter-spacing="3" fill="#ffffff">DYNAMITE</text>
+  <text x="200" y="372" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="600" letter-spacing="6" fill="#7DD3FC">NIGHTTIME VERSION</text>
+</svg>

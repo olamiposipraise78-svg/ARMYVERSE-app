@@ -1,0 +1,549 @@
+/* ---------------------------------------------------------------------------
+   Guess the Song
+--------------------------------------------------------------------------- */
+
+.guesssong-page {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Start screen */
+.guesssong-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding-top: 20px;
+}
+.guesssong-start__hero {
+  text-align: center;
+}
+.guesssong-start__icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 10px;
+}
+.guesssong-start__title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+.guesssong-start__sub {
+  font-size: 0.95rem;
+  color: var(--c-text-soft);
+  margin: 0;
+}
+.guesssong-start__diffs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.guesssong-diff {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease);
+  color: var(--c-text);
+  text-align: left;
+  width: 100%;
+}
+.guesssong-diff:hover {
+  border-color: var(--c-purple);
+  box-shadow: var(--glow-purple);
+}
+.guesssong-diff__icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.guesssong-diff__name {
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+  min-width: 0;
+}
+.guesssong-diff__desc {
+  font-size: 0.82rem;
+  color: var(--c-text-soft);
+  flex: 1;
+}
+.guesssong-diff__timer {
+  font-size: 0.75rem;
+  color: var(--c-text-faint);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+.guesssong-start__info {
+  text-align: center;
+}
+.guesssong-start__info p {
+  margin: 4px 0;
+  font-size: 0.82rem;
+  color: var(--c-text-faint);
+}
+
+/* Game HUD */
+.guesssong-game {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.guesssong-game__hud {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+.guesssong-hud__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.guesssong-hud__lives {
+  display: flex;
+  gap: 2px;
+}
+.guesssong-heart {
+  font-size: 1.1rem;
+  transition: transform var(--dur-fast) var(--ease);
+}
+.guesssong-heart--off {
+  opacity: 0.4;
+}
+.guesssong-hud__streak {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--c-warning);
+}
+.guesssong-fire {
+  display: inline;
+}
+.guesssong-hud__center {
+  font-size: 0.88rem;
+  color: var(--c-text-soft);
+  font-variant-numeric: tabular-nums;
+}
+.guesssong-hud__right {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--c-purple);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Timer bar */
+.guesssong-timer-bar {
+  height: 4px;
+  background: var(--c-surface-2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.guesssong-timer-bar__fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 1s linear, background 0.3s var(--ease);
+}
+
+/* Question */
+.guesssong-question {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.guesssong-question__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+}
+.guesssong-question__category {
+  padding: 3px 10px;
+  border-radius: var(--r-pill);
+  background: var(--c-surface-2);
+  color: var(--c-text-soft);
+  text-transform: capitalize;
+}
+.guesssong-question__difficulty {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.guesssong-question__timer {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--c-text-faint);
+}
+
+/* Clue */
+.guesssong-clue {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+}
+.guesssong-clue--hidden {
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+.guesssong-clue--revealed {
+  animation: guesssongClueReveal 0.4s var(--ease);
+}
+@keyframes guesssongClueReveal {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.guesssong-clue__icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+.guesssong-clue__text {
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--c-text);
+}
+.guesssong-clue__audio-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.guesssong-clue__audio-label {
+  font-size: 0.9rem;
+  color: var(--c-text-soft);
+  margin: 0;
+  font-style: italic;
+}
+
+/* Intro screen */
+.guesssong-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 48px 16px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  text-align: center;
+  animation: guesssongIntroIn 0.3s var(--ease);
+}
+@keyframes guesssongIntroIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+.guesssong-intro__badge {
+  padding: 4px 14px;
+  border-radius: var(--r-pill);
+  background: var(--c-surface-2);
+  color: var(--c-text-soft);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.guesssong-intro__title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 0;
+}
+.guesssong-intro__sub {
+  font-size: 0.9rem;
+  color: var(--c-text-soft);
+  margin: 0;
+}
+.guesssong-intro__loading {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+.guesssong-intro__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--c-purple);
+  animation: guesssongIntroDot 0.9s ease-in-out infinite;
+}
+.guesssong-intro__dot:nth-child(2) { animation-delay: 0.15s; }
+.guesssong-intro__dot:nth-child(3) { animation-delay: 0.3s; }
+@keyframes guesssongIntroDot {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(-8px); opacity: 1; }
+}
+
+/* Listening screen */
+.guesssong-listening {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px 16px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  text-align: center;
+  animation: guesssongIntroIn 0.3s var(--ease);
+}
+.guesssong-listening__wave {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 56px;
+}
+.guesssong-listening__bar {
+  display: block;
+  width: 4px;
+  height: 16px;
+  background: var(--c-surface-2);
+  border-radius: 2px;
+  transition: height 0.2s var(--ease), background 0.2s var(--ease);
+}
+.guesssong-listening__bar--on {
+  background: var(--c-purple);
+  height: 24px;
+  animation: guesssongWave 0.7s ease-in-out infinite;
+  animation-delay: calc(var(--bar-i) * -0.06s);
+}
+.guesssong-listening__bar--on:nth-child(3n+1) { height: 36px; }
+.guesssong-listening__bar--on:nth-child(3n+2) { height: 20px; }
+.guesssong-listening__bar--on:nth-child(3n) { height: 28px; }
+@keyframes guesssongWave {
+  0%, 100% { transform: scaleY(0.5); }
+  50% { transform: scaleY(1); }
+}
+.guesssong-listening__title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 0;
+}
+.guesssong-listening__sub {
+  font-size: 0.9rem;
+  color: var(--c-text-soft);
+  margin: 0;
+}
+
+/* Tap-to-listen fallback */
+.guesssong-tap-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  background: var(--grad-brand);
+  color: var(--c-white);
+  border: none;
+  border-radius: var(--r-pill);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all var(--dur-fast) var(--ease);
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  justify-content: center;
+  animation: guesssongTapPulse 1.4s ease-in-out infinite;
+}
+.guesssong-tap-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+}
+.guesssong-tap-btn__icon {
+  font-size: 1.1rem;
+}
+.guesssong-tap-btn__text {
+  font-size: 0.95rem;
+}
+@keyframes guesssongTapPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.35); }
+  50% { box-shadow: 0 0 0 12px rgba(139, 92, 246, 0); }
+}
+
+/* Options */
+.guesssong-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.guesssong-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--c-surface);
+  border: 2px solid var(--c-border);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease);
+  color: var(--c-text);
+  text-align: left;
+  font-size: 0.95rem;
+  width: 100%;
+}
+.guesssong-option:hover:not(:disabled) {
+  border-color: var(--c-purple);
+  background: rgba(56, 189, 248, 0.06);
+}
+.guesssong-option:disabled {
+  cursor: default;
+}
+.guesssong-option__letter {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--c-surface-2);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 0.82rem;
+  flex-shrink: 0;
+  transition: all var(--dur-fast) var(--ease);
+}
+.guesssong-option:hover:not(:disabled) .guesssong-option__letter {
+  background: var(--c-purple);
+  color: var(--c-white);
+}
+.guesssong-option__text {
+  flex: 1;
+}
+.guesssong-option__icon {
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.guesssong-option--correct {
+  border-color: var(--c-success) !important;
+  background: rgba(46, 189, 133, 0.1) !important;
+}
+.guesssong-option--correct .guesssong-option__letter {
+  background: var(--c-success);
+  color: var(--c-white);
+}
+.guesssong-option--wrong {
+  border-color: var(--c-danger) !important;
+  background: rgba(245, 68, 107, 0.1) !important;
+}
+.guesssong-option--wrong .guesssong-option__letter {
+  background: var(--c-danger);
+  color: var(--c-white);
+}
+
+/* Fun fact */
+.guesssong-fact {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  border-radius: var(--r-md);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  animation: guesssongFactSlideIn 0.3s var(--ease);
+}
+@keyframes guesssongFactSlideIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.guesssong-fact--correct {
+  background: rgba(46, 189, 133, 0.1);
+  border: 1px solid rgba(46, 189, 133, 0.3);
+  color: var(--c-success);
+}
+.guesssong-fact--wrong {
+  background: rgba(245, 68, 107, 0.1);
+  border: 1px solid rgba(245, 68, 107, 0.3);
+  color: var(--c-danger);
+}
+.guesssong-fact__icon {
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+.guesssong-fact__text {
+  margin: 0;
+}
+
+/* Results */
+.guesssong-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding-top: 20px;
+}
+.guesssong-results__hero {
+  text-align: center;
+}
+.guesssong-results__icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 10px;
+}
+.guesssong-results__title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+.guesssong-results__sub {
+  font-size: 0.92rem;
+  color: var(--c-text-soft);
+  margin: 0;
+}
+.guesssong-results__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+.guesssong-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 8px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+}
+.guesssong-stat__value {
+  font-size: 1.4rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.guesssong-stat__label {
+  font-size: 0.7rem;
+  color: var(--c-text-faint);
+  text-transform: uppercase;
+}
+.guesssong-results__guest {
+  padding: 12px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  width: 100%;
+  text-align: center;
+}
+.guesssong-results__guest p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--c-text-soft);
+}
+.guesssong-results__actions {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.guesssong-results__actions .btn {
+  flex: 1;
+}
+
+@media (max-width: 480px) {
+  .guesssong-results__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,17 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Proof anthology album cover art by BTS">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A1730"/><stop offset="0.5" stop-color="#0d2340"/><stop offset="1" stop-color="#07111F"/>
+    </linearGradient>
+    <radialGradient id="r" cx=".5" cy=".45" r=".65"><stop offset="0" stop-color="#7DD3FC" stop-opacity=".8"/><stop offset="1" stop-color="#0A1730" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#g)"/>
+  <rect width="400" height="400" fill="url(#r)"/>
+  <circle cx="200" cy="190" r="132" fill="none" stroke="#A5D8F5" stroke-width="4"/>
+  <circle cx="200" cy="190" r="100" fill="none" stroke="#A5D8F5" stroke-width="2" stroke-dasharray="4 6"/>
+  <circle cx="200" cy="190" r="64" fill="url(#r)"/>
+  <circle cx="200" cy="190" r="64" fill="none" stroke="#EAF6FF" stroke-width="3"/>
+  <path d="M200 150v80M170 180h60M180 210l20-30 20 30" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="200" y="60" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="40" font-weight="800" letter-spacing="8" fill="#ffffff">PROOF</text>
+  <text x="200" y="370" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="600" letter-spacing="6" fill="#A5D8F5">BTS ANTHOLOGY</text>
+</svg>

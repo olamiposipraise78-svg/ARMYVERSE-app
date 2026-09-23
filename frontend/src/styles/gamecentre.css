@@ -1,0 +1,135 @@
+/* ---------------------------------------------------------------------------
+   Game Centre
+--------------------------------------------------------------------------- */
+
+.gamecentre__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 10px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+}
+.stat-card__value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--c-purple);
+  font-variant-numeric: tabular-nums;
+}
+.stat-card__label {
+  font-size: 0.72rem;
+  color: var(--c-text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.gamecentre__guest {
+  padding: 14px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.gamecentre__guest p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--c-text-soft);
+}
+
+.gamecentre__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
+  gap: 14px;
+}
+
+/* Game card */
+.game-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 16px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease);
+  text-align: center;
+  position: relative;
+  color: var(--c-text);
+}
+.game-card:hover {
+  border-color: var(--c-purple);
+  transform: translateY(-2px);
+  box-shadow: var(--glow-purple);
+}
+.game-card--coming {
+  opacity: 0.5;
+  cursor: default;
+}
+.game-card--coming:hover {
+  transform: none;
+  border-color: var(--c-border);
+  box-shadow: none;
+}
+.game-card__icon {
+  font-size: 2.5rem;
+}
+.game-card__title {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.game-card__desc {
+  font-size: 0.82rem;
+  color: var(--c-text-soft);
+}
+.game-card__badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 3px 10px;
+  border-radius: var(--r-pill);
+  background: var(--grad-brand);
+  color: var(--c-white);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.game-card__arrow {
+  margin-top: 4px;
+  color: var(--c-text-faint);
+  transition: color var(--dur-fast) var(--ease);
+}
+.game-card:hover .game-card__arrow {
+  color: var(--c-purple);
+}
+
+@media (max-width: 600px) {
+  .gamecentre__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .game-card {
+    padding: 18px 12px;
+  }
+  .game-card__icon {
+    font-size: 2.1rem;
+  }
+  .stat-card {
+    padding: 10px 8px;
+  }
+  .stat-card__value {
+    font-size: 1.3rem;
+  }
+}

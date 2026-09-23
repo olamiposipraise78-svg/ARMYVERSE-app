@@ -1,0 +1,79 @@
+:root {
+  /* Core palette — Midnight Navy + Cyan (modern BTS / ARMY theme) */
+  --c-purple-deep: #0f3b5c;
+  --c-purple: #38BDF8;
+  --c-purple-med: #67E8F9;
+  --c-lavender: #7DD3FC;
+  --c-lavender-soft: #132c44;
+  --c-iris: #0EA5E9;
+
+  --c-charcoal: #0D1B2A;
+  --c-charcoal-2: #122a45;
+  --c-charcoal-3: #1b3a5c;
+
+  --c-white: #ffffff;
+  --c-offwhite: #07111F;
+  --c-surface: #0D1B2A;
+  --c-surface-2: #102a44;
+
+  --c-text: #F8FAFC;
+  --c-text-soft: #94A3B8;
+  --c-text-faint: #6B7A90;
+  --c-border: rgba(56, 189, 248, 0.12);
+  --c-border-strong: rgba(56, 189, 248, 0.22);
+
+  --c-danger: #f5446b;
+  --c-success: #2ebd85;
+  --c-warning: #f5b83d;
+  --c-info: #38bdf8;
+
+  /* Gradients */
+  --grad-brand: linear-gradient(135deg, #0a3a5c 0%, #0ea5e9 45%, #38BDF8 100%);
+  --grad-radial-glow: radial-gradient(
+    circle at 30% 20%,
+    rgba(56, 189, 248, 0.35),
+    rgba(13, 27, 42, 0.08) 60%,
+    transparent 70%
+  );
+
+  /* Typography */
+  --font-ui: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-display: 'Inter', 'Segoe UI', system-ui, sans-serif;
+
+  /* Radii */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 26px;
+  --r-pill: 999px;
+
+  /* Spacing scale */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgba(7, 17, 31, 0.5), 0 1px 3px rgba(7, 17, 31, 0.55);
+  --shadow-md: 0 6px 20px rgba(7, 17, 31, 0.55);
+  --shadow-lg: 0 16px 40px rgba(7, 17, 31, 0.6);
+  --glow-purple: 0 0 0 1px rgba(56, 189, 248, 0.35), 0 8px 30px rgba(14, 165, 233, 0.25);
+
+  /* Motion */
+  --dur-fast: 140ms;
+  --dur-med: 240ms;
+  --dur-slow: 400ms;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout */
+  --sidebar-w: 248px;
+  --rail-w: 300px;
+  --content-max: 600px;
+  --topbar-h: 60px;
+  --nav-h-mobile: 62px;
+}

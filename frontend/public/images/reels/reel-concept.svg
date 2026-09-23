@@ -1,0 +1,23 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="BTS concept photo stylized poster">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111F"/><stop offset="0.5" stop-color="#0f3b5c"/><stop offset="1" stop-color="#0A1730"/>
+    </linearGradient>
+    <radialGradient id="r" cx=".5" cy=".35" r=".6"><stop offset="0" stop-color="#7DD3FC" stop-opacity=".85"/><stop offset="1" stop-color="#0A1730" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#g)"/>
+  <rect width="400" height="400" fill="url(#r)"/>
+  <g fill="#E0F2FE">
+    <path d="M60 150c4-42 14-62 34-62s30 20 34 62c-6 30-20 46-34 46s-28-16-34-46z" opacity="0.85"/>
+    <path d="M140 170c3-40 12-58 30-58s27 18 30 58c-5 28-18 44-30 44s-25-16-30-44z" opacity="0.9"/>
+    <path d="M220 150c4-42 14-62 34-62s30 20 34 62c-6 30-20 46-34 46s-28-16-34-46z" opacity="0.85"/>
+    <path d="M300 170c3-40 12-58 30-58s27 18 30 58c-5 28-18 44-30 44s-25-16-30-44z" opacity="0.9"/>
+  </g>
+  <g transform="translate(200,250)">
+    <circle cx="-60" cy="0" r="34" fill="#0f3b5c"/>
+    <circle cx="-20" cy="-10" r="34" fill="#0f3b5c"/>
+    <circle cx="20" cy="-10" r="34" fill="#0f3b5c"/>
+    <circle cx="60" cy="0" r="34" fill="#0f3b5c"/>
+  </g>
+  <text x="200" y="352" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="34" font-weight="800" letter-spacing="6" fill="#EAF6FF">CONCEPT</text>
+</svg>

@@ -1,0 +1,18 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" role="img" aria-label="Songs community topic art">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A1730"/><stop offset="0.5" stop-color="#0f3b5c"/><stop offset="1" stop-color="#07111F"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="200" fill="url(#g)"/>
+  <circle cx="70" cy="110" r="40" fill="#0D1930"/>
+  <circle cx="70" cy="110" r="40" fill="none" stroke="#7DD3FC" stroke-opacity="0.5" stroke-width="4"/>
+  <circle cx="150" cy="110" r="40" fill="none" stroke="#38BDF8" stroke-opacity="0.5" stroke-width="4" stroke-dasharray="6 5"/>
+  <circle cx="230" cy="110" r="40" fill="none" stroke="#EAF6FF" stroke-width="3"/>
+  <g fill="#7DD3FC">
+    <path d="M120 40l10 0 0 30-10 0z"/>
+    <path d="M135 44l10 0 0 22-10 0z"/>
+    <path d="M150 48l10 0 0 14-10 0z"/>
+  </g>
+  <text x="150" y="176" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="700" letter-spacing="2" fill="#EAF6FF">SONGS</text>
+</svg>

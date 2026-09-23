@@ -1,0 +1,21 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="j-hope BTS member portrait art">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0D1930"/><stop offset="0.5" stop-color="#0d3450"/><stop offset="1" stop-color="#0A1730"/>
+    </linearGradient>
+    <radialGradient id="r" cx=".5" cy=".35" r=".6"><stop offset="0" stop-color="#67E8F9" stop-opacity=".85"/><stop offset="1" stop-color="#0A1730" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="300" height="300" fill="url(#g)"/>
+  <rect width="300" height="300" fill="url(#r)"/>
+  <circle cx="150" cy="130" r="58" fill="#0d3450"/>
+  <path d="M150 78a52 52 0 0 0-52 52v8h104v-8a52 52 0 0 0-52-52z" fill="#E8FBFF"/>
+  <circle cx="150" cy="86" r="46" fill="#E8FBFF"/>
+  <ellipse cx="132" cy="92" rx="6" ry="8" fill="#122a45"/>
+  <ellipse cx="168" cy="92" rx="6" ry="8" fill="#122a45"/>
+  <path d="M134 118q16 16 32 0" stroke="#122a45" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="200" cy="52" r="5" fill="#67E8F9"/>
+  <circle cx="222" cy="90" r="4" fill="#67E8F9" opacity=".8"/>
+  <circle cx="84" cy="48" r="4" fill="#67E8F9" opacity=".7"/>
+  <path d="M150 190v54M150 214l-28 30M150 214l28 30M150 196l-36 18M150 196l36 18" stroke="#E8FBFF" stroke-width="7" stroke-linecap="round"/>
+  <text x="150" y="282" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="24" font-weight="800" letter-spacing="4" fill="#67E8F9">J-HOPE</text>
+</svg>

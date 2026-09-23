@@ -1,0 +1,103 @@
+// Mock Reels feed for ARMYVERSE — vertical short-video content.
+// Videos use freely usable loopable clips (Pexels free-license); posters are
+// real BTS photos/artwork from Wikimedia Commons themed to each clip.
+
+const poster = (path) => path
+const minutesAgo = (m) => Date.now() - m * 60 * 1000
+
+export const reels = [
+  {
+    id: 'r1',
+    user: 'u4',
+    createdAt: minutesAgo(20),
+    caption: 'Flash-mob final rehearsal for the Seoul ARMY meet — Dynamite choreo under the lights. 🎶💜',
+    hashtags: ['#Dynamite', '#DanceCover', '#TokyoARMY'],
+    audio: 'Dynamite — BTS',
+    likeCount: 12400,
+    commentCount: 890,
+    shareCount: 320,
+    saveCount: 1450,
+    src: 'https://videos.pexels.com/video-files/3255376/3255376-hd_1920_1080_30fps.mp4',
+    poster: poster('https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Bts_Dynamite_2.svg/960px-Bts_Dynamite_2.svg.png'),
+    alt: 'Dynamite artwork behind stage lights during a BTS-style performance',
+  },
+  {
+    id: 'r2',
+    user: 'u6',
+    createdAt: minutesAgo(95),
+    caption: 'Binder tour!! Photocards sorted by era, front to back — yes I’m that organized. 📸',
+    hashtags: ['#Photocards', '#BTSCollector', '#BinderTour'],
+    audio: 'Seven — Jung Kook',
+    likeCount: 7200,
+    commentCount: 640,
+    shareCount: 180,
+    saveCount: 2330,
+    src: 'https://videos.pexels.com/video-files/3561390/3561390-hd_1920_1080_30fps.mp4',
+    poster: poster('https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/170529_BTS_at_a_press_conference_for_the_BBMAs_%282%29.png/960px-170529_BTS_at_a_press_conference_for_the_BBMAs_%282%29.png'),
+    alt: 'Real BTS group photo backdropping the binder tour',
+  },
+  {
+    id: 'r3',
+    user: 'u5',
+    createdAt: minutesAgo(240),
+    caption: 'Rewatching the anniversary livestream — the crowd was UNREAL. Borahae to everyone out there. 💜🇧🇷',
+    hashtags: ['#Anniversary', '#LiveStream', '#Borahae'],
+    audio: 'Boy With Luv — BTS',
+    likeCount: 22100,
+    commentCount: 1930,
+    shareCount: 980,
+    saveCount: 3620,
+    src: 'https://videos.pexels.com/video-files/2795405/2795405-hd_1920_1080_25fps.mp4',
+    poster: poster('https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/BTS_in_concert_at_Wembley_Stadium%2C_2_June_2019_01.jpg/960px-BTS_in_concert_at_Wembley_Stadium%2C_2_June_2019_01.jpg'),
+    alt: 'Real BTS stadium crowd at the anniversary livestream',
+  },
+  {
+    id: 'r4',
+    user: 'u3',
+    createdAt: minutesAgo(430),
+    caption: 'Era symbolism, part one — the storytelling hid so much in plain sight. New discoveries every rewatch. 🧠',
+    hashtags: ['#ConceptAnalysis', '#BTSDeepDive', '#STORY'],
+    audio: 'Black Swan — BTS',
+    likeCount: 5400,
+    commentCount: 720,
+    shareCount: 410,
+    saveCount: 1900,
+    src: 'https://videos.pexels.com/video-files/15162982/15162982-hd_1920_1080_25fps.mp4',
+    poster: poster('https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/170529_BTS_at_a_press_conference_for_the_BBMAs_%282%29.png/960px-170529_BTS_at_a_press_conference_for_the_BBMAs_%282%29.png'),
+    alt: 'Real BTS press-conference imagery framing the concept analysis',
+  },
+  {
+    id: 'r5',
+    user: 'u8',
+    createdAt: minutesAgo(620),
+    caption: 'Butter-themed bake-off recap!! Purple icing, endless cupcakes, zero regrets. 🧁✨',
+    hashtags: ['#FanEvent', '#Butter', '#ARMYCommunity'],
+    audio: 'Butter (Instrumental) — BTS',
+    likeCount: 8300,
+    commentCount: 910,
+    shareCount: 270,
+    saveCount: 1100,
+    src: 'https://videos.pexels.com/video-files/1895261/1895261-hd_1920_1080_25fps.mp4',
+    poster: poster('https://upload.wikimedia.org/wikipedia/commons/c/ce/180825-26_J-Hope_LOVE_YOURSELF_tour_in_Seoul_%283%29.jpg'),
+    alt: 'Real BTS tour celebration for the community bake-off',
+  },
+  {
+    id: 'r6',
+    user: 'u7',
+    createdAt: minutesAgo(880),
+    caption: 'A little V appreciation reel — jazz, Winter Bear, and that unmistakable low voice. 🎷💜',
+    hashtags: ['#V', '#WinterBear', '#KTH1'],
+    audio: 'Winter Bear — V',
+    likeCount: 16100,
+    commentCount: 1420,
+    shareCount: 640,
+    saveCount: 2870,
+    src: 'https://videos.pexels.com/video-files/856973/856973-hd_1920_1080_25fps.mp4',
+    poster: poster('https://upload.wikimedia.org/wikipedia/commons/3/34/V_%28Kim_Tae-hyung%29_performing_at_the_TRB_in_Taipei_02_%28cropped%29.jpg'),
+    alt: 'Real V performance photo for the appreciation reel',
+  },
+]
+
+export function getReelById(id) {
+  return reels.find((r) => r.id === id) || reels[0]
+}

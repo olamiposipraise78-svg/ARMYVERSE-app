@@ -1,0 +1,16 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" role="img" aria-label="Stage community topic art">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111F"/><stop offset="0.5" stop-color="#0f3b5c"/><stop offset="1" stop-color="#0A1730"/>
+    </linearGradient>
+    <radialGradient id="r" cx=".5" cy=".3" r=".6"><stop offset="0" stop-color="#38BDF8" stop-opacity=".85"/><stop offset="1" stop-color="#0A1730" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="300" height="200" fill="url(#g)"/>
+  <rect width="300" height="200" fill="url(#r)"/>
+  <g transform="translate(150,80)" fill="#EAF6FF">
+    <path d="M0 60l34-40 34 40z"/>
+    <path d="M8 110h52l8 26H0z"/>
+  </g>
+  <path d="M60 170c60-30 120-30 180 0v10H60z" fill="#0D1930"/>
+  <text x="150" y="172" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" letter-spacing="3" fill="#7DD3FC">STAGE</text>
+</svg>

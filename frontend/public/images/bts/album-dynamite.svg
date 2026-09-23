@@ -1,0 +1,23 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Dynamite single cover art by BTS">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f3b5c"/><stop offset="0.5" stop-color="#0EA5E9"/><stop offset="1" stop-color="#7DD3FC"/>
+    </linearGradient>
+    <radialGradient id="starburst" cx=".5" cy=".5" r=".7"><stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/><stop offset="1" stop-color="#7DD3FC" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#g)"/>
+  <g fill="#ffffff" opacity="0.85">
+    <path d="M200 20v40M200 340v40"/>
+    <path d="M20 200h40M340 200h40"/>
+    <path d="M73 73l28 28M299 299l28 28"/>
+    <path d="M327 73l-28 28M101 299l-28 28"/>
+  </g>
+  <g transform="translate(200,200)">
+    <circle r="128" fill="url(#starburst)"/>
+    <circle r="128" fill="none" stroke="#ffffff" stroke-opacity=".6" stroke-width="6"/>
+    <path d="M0-118c-6 0-12 3-15 8-2 4 0 9 4 11 7 4 15 12 19 22a40 40 0 0 1 20 0c4-10 12-18 19-22 4-2 6-7 4-11-3-5-9-8-15-8" transform="rotate(-12)" fill="#ffffff" opacity=".95"/>
+    <text x="0" y="-58" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="34" font-weight="800" letter-spacing="2" fill="#07111F">DYNAMITE</text>
+    <text x="0" y="-18" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="16" font-weight="600" letter-spacing="6" fill="#0D1930">BTS</text>
+    <text x="0" y="150" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="600" letter-spacing="3" fill="#07111F">2020 SINGLE</text>
+  </g>
+</svg>

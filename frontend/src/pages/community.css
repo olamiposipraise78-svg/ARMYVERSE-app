@@ -1,0 +1,246 @@
+/* Community */
+.community-hero {
+  text-align: center;
+  padding: 32px 20px;
+  margin-bottom: 22px;
+  background-color: var(--c-surface-2);
+  background-image: linear-gradient(
+      rgba(7, 17, 31, 0.82),
+      rgba(7, 17, 31, 0.82)
+    ),
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/BTS_in_concert_at_Wembley_Stadium%2C_2_June_2019_01.jpg/1280px-BTS_in_concert_at_Wembley_Stadium%2C_2_June_2019_01.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  border-radius: var(--r-xl);
+  box-shadow: var(--glow-purple);
+  position: relative;
+  overflow: hidden;
+}
+.community-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--grad-radial-glow);
+  pointer-events: none;
+}
+.community-hero__emoji {
+  font-size: 2.4rem;
+  position: relative;
+  z-index: 1;
+}
+.community-hero__title {
+  font-size: 1.6rem;
+  position: relative;
+  z-index: 1;
+  margin-top: 8px;
+}
+.community-hero__sub {
+  position: relative;
+  z-index: 1;
+  opacity: 0.95;
+  max-width: 520px;
+  margin: 8px auto 0;
+  font-size: 0.95rem;
+}
+
+.community-head {
+  margin-bottom: 14px;
+}
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
+  gap: 12px;
+}
+.topic-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  padding: 16px;
+  text-align: left;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+.topic-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--c-lavender);
+}
+.topic-card__thumb {
+  position: relative;
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: var(--c-charcoal);
+}
+.topic-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.topic-card__emoji {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  background: rgba(28, 16, 38, 0.35);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+.topic-card__info {
+  flex: 1;
+  min-width: 0;
+}
+.topic-card__label {
+  display: block;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.topic-card__blurb {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--c-text-soft);
+  margin-top: 2px;
+}
+.topic-card__count {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: var(--c-text-faint);
+  margin-top: 8px;
+}
+.topic-card__arrow {
+  flex-shrink: 0;
+  color: var(--c-text-faint);
+  margin-top: 4px;
+  transition: transform var(--dur-fast) var(--ease);
+}
+.topic-card:hover .topic-card__arrow {
+  transform: translateX(3px);
+  color: var(--c-purple);
+}
+
+/* Topic detail */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--c-text-soft);
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 4px 0;
+  margin-bottom: 10px;
+}
+.back-link:hover {
+  color: var(--c-purple);
+}
+.community-topic-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.topic-composer {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  padding: 14px;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow-sm);
+}
+.topic-composer__input {
+  width: 100%;
+  resize: vertical;
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  padding: 4px 2px;
+}
+.topic-composer__input:focus {
+  outline: none;
+}
+.topic-composer__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+}
+.topic-composer__hint {
+  font-size: 0.78rem;
+  color: var(--c-text-faint);
+}
+
+.community-post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.community-post {
+  display: flex;
+  gap: 12px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  padding: 16px;
+}
+.community-post__body {
+  flex: 1;
+  min-width: 0;
+}
+.community-post__meta {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.community-post__name {
+  font-weight: 600;
+}
+.community-post__time {
+  font-size: 0.78rem;
+  color: var(--c-text-faint);
+}
+.community-post__text {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.community-post__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.community-post__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+}
+.community-post__replies {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--c-text-soft);
+}
+
+.topic-albums {
+  margin-bottom: 22px;
+}
+.community-sec-title {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}

@@ -1,0 +1,114 @@
+.notif-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  margin-bottom: 6px;
+  scrollbar-width: none;
+}
+.notif-tabs::-webkit-scrollbar {
+  display: none;
+}
+.notif-tab {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border-radius: var(--r-pill);
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  color: var(--c-text-soft);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all var(--dur-fast) var(--ease);
+}
+.notif-tab:hover {
+  border-color: var(--c-lavender);
+  color: var(--c-purple);
+}
+.notif-tab--active {
+  background: var(--c-charcoal);
+  color: #fff;
+  border-color: transparent;
+}
+
+.notif-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.notif-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  padding: 14px;
+  cursor: pointer;
+  transition: background-color var(--dur-fast) var(--ease);
+}
+.notif-row:hover {
+  background: var(--c-surface-2);
+}
+.notif-row--unread {
+  border-color: var(--c-lavender);
+  background: var(--c-lavender-soft);
+}
+.notif-row--unread:hover {
+  background: var(--c-lavender-soft);
+}
+.notif-row__avatar {
+  position: relative;
+  flex-shrink: 0;
+}
+.notif-row__icon {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 2px solid var(--c-white);
+}
+.notif-row__icon--like { background: var(--c-danger); }
+.notif-row__icon--comment { background: var(--c-info); }
+.notif-row__icon--follow { background: var(--c-success); }
+.notif-row__icon--save { background: linear-gradient(135deg, var(--c-iris), var(--c-purple)); }
+.notif-row__icon--mention { background: var(--c-warning); }
+.notif-row__icon--message { background: var(--c-purple); }
+
+.notif-row__body {
+  flex: 1;
+  min-width: 0;
+}
+.notif-row__text {
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+.notif-row__name {
+  font-weight: 600;
+}
+.notif-row__caption {
+  font-size: 0.85rem;
+  color: var(--c-text-soft);
+  margin-top: 4px;
+  font-style: italic;
+}
+.notif-row__time {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--c-text-faint);
+  margin-top: 4px;
+}
+.notif-row__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--c-purple);
+  margin-top: 6px;
+  flex-shrink: 0;
+}

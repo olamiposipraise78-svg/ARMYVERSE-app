@@ -1,0 +1,19 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="Jin BTS member portrait art">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A1730"/><stop offset="0.55" stop-color="#0d2340"/><stop offset="1" stop-color="#0A1730"/>
+    </linearGradient>
+    <radialGradient id="r" cx=".5" cy=".35" r=".6"><stop offset="0" stop-color="#A5D8F5" stop-opacity=".9"/><stop offset="1" stop-color="#0A1730" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="300" height="300" fill="url(#g)"/>
+  <rect width="300" height="300" fill="url(#r)"/>
+  <circle cx="150" cy="130" r="58" fill="#0f3b5c"/>
+  <path d="M150 78a52 52 0 0 0-52 52v8h104v-8a52 52 0 0 0-52-52z" fill="#EAF6FF"/>
+  <circle cx="150" cy="86" r="46" fill="#EAF6FF"/>
+  <ellipse cx="132" cy="92" rx="6" ry="8" fill="#0D1B2A"/>
+  <ellipse cx="168" cy="92" rx="6" ry="8" fill="#0D1B2A"/>
+  <path d="M134 120q16 14 32 0" stroke="#0D1B2A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M150 190v62M150 218l-32 34M150 218l32 34M150 198l-40 20M150 198l40 20" stroke="#EAF6FF" stroke-width="7" stroke-linecap="round"/>
+  <text x="150" y="150" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" letter-spacing="3" fill="#7DD3FC">❝</text>
+  <text x="150" y="282" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="26" font-weight="800" letter-spacing="6" fill="#7DD3FC">JIN</text>
+</svg>

@@ -1,0 +1,65 @@
+/* ============================================================
+   Media frame — non-destructive crop rendering
+   Fits an aspect box inside its container (contain), and the media
+   element inside the box is positioned by inline styles from cropMath.
+============================================================ */
+
+.media-frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  background: var(--c-charcoal, #000);
+  flex: 0 0 auto;
+}
+
+.media-frame__media {
+  position: absolute;
+  display: block;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  background: transparent;
+}
+
+/* Feed / reel: keep the familiar max-height cap for tall media. */
+.media-frame--post {
+  max-height: min(480px, 70vh);
+}
+
+/* Reels fill their container. */
+.media-frame--reel {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+}
+
+/* Stories: as tall as the story area allows. */
+.media-frame--story {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+}
+
+/* Composer previews. */
+.media-frame--preview {
+  max-height: 420px;
+}
+
+/* Thumbnail grids: fill the square cell (Explore/Profile/Saved). */
+.media-frame--tile {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+}
+
+/* Search result thumbnails. */
+.media-frame--thumb {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: var(--r-sm, 8px);
+}

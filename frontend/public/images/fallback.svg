@@ -1,0 +1,18 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="BTS ARMYVerse fallback placeholder">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111F"/><stop offset="0.5" stop-color="#0f3b5c"/><stop offset="1" stop-color="#0A1730"/>
+    </linearGradient>
+    <radialGradient id="r" cx=".5" cy=".4" r=".6"><stop offset="0" stop-color="#7DD3FC" stop-opacity=".8"/><stop offset="1" stop-color="#0A1730" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#g)"/>
+  <rect width="400" height="400" fill="url(#r)"/>
+  <g transform="translate(200,170)" fill="#EAF6FF">
+    <circle cx="0" cy="-70" r="34"/>
+    <path d="M-30-30l-18-18M30-30l18-18" stroke="#38BDF8" stroke-width="6" stroke-linecap="round"/>
+    <path d="M-34 10c-34 4-46 18-46 34v26c0 16 8 30 24 34 30-40 78-40 108 0 16-4 24-18 24-34V44c0-16-12-30-46-34z"/>
+  </g>
+  <circle cx="200" cy="290" r="26" fill="#38BDF8"/>
+  <circle cx="200" cy="290" r="10" fill="#ffffff"/>
+  <text x="200" y="356" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="800" letter-spacing="6" fill="#EAF6FF">BORAHAE</text>
+</svg>

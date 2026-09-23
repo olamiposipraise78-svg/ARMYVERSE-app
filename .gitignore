@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build output
+frontend/dist/
+dist/
+
+# Python
+backend/.venv/
+__pycache__/
+*.pyc
+
+# Environment / secrets - NEVER commit real credentials
+backend/.env
+.env
+
+# Runtime data / local media - never commit user-uploaded files or the
+# in-memory repository's local persistence dump (contains password hashes)
+backend/uploads/
+backend/data.json
+backend/data.json.tmp
+backend/python
+
+# Caches
+.pytest_cache/
+.vite/
+*.log

@@ -1,0 +1,23 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" role="img" aria-label="BTS group seven members on stage">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111F"/><stop offset="0.5" stop-color="#0f3b5c"/><stop offset="1" stop-color="#0A1730"/>
+    </linearGradient>
+    <radialGradient id="spot" cx=".5" cy=".3" r=".7"><stop offset="0" stop-color="#38BDF8" stop-opacity=".9"/><stop offset="1" stop-color="#0A1730" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="900" height="400" fill="url(#g)"/>
+  <rect width="900" height="400" fill="url(#spot)"/>
+  <g fill="#E0F2FE">
+    <path d="M120 250c6-70 22-100 48-104 8 16 5 40-4 60-16 30-28 44-40 48z" opacity="0.9"/>
+    <path d="M245 250c4-66 16-96 40-96s36 30 40 96z" opacity="0.95"/>
+    <path d="M395 250c4-62 14-92 38-92s34 30 38 92z"/>
+    <path d="M545 250c-2-60-8-90-30-94-8 14-6 36 2 56 12 26 22 38 30 42z" opacity="0.95"/>
+    <path d="M690 250c-8-70-22-98-46-102-8 16-6 40 3 60 14 30 27 44 42 48z" opacity="0.9"/>
+    <path d="M68 250h764" stroke="#7DD3FC" stroke-width="4" opacity="0.7"/>
+  </g>
+  <circle cx="180" cy="120" r="22" fill="#38BDF8" opacity="0.35"/>
+  <circle cx="420" cy="112" r="26" fill="#67E8F9" opacity="0.35"/>
+  <circle cx="660" cy="122" r="22" fill="#38BDF8" opacity="0.35"/>
+  <text x="450" y="352" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="40" font-weight="800" letter-spacing="10" fill="#EAF6FF">BTS</text>
+  <text x="450" y="386" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="600" letter-spacing="8" fill="#7DD3FC">BORAHAE ARMYS</text>
+</svg>
