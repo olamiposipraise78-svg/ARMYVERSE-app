@@ -37,8 +37,13 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 app.add_middleware(SecurityHeadersMiddleware)
 
 # ---- CORS (restricted to the frontend origin) ----
-allowed_origin = settings.frontend_url.strip()
-allowed_origins = [allowed_origin] if allowed_origin else []
+# FRONTEND_URL may be a single origin or a comma-separated list, so a custom
+# domain plus the platform URL can all be allowed in production.
+allowed_origins = [
+    origin.strip()
+    for origin in settings.frontend_url.split(",")
+    if origin.strip()
+]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=allowed_origins,

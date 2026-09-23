@@ -1,0 +1,33 @@
+# Keep the Docker build context small and keep local secrets/media out.
+
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# Node / frontend (node_modules and dist are rebuilt in the image)
+frontend/node_modules
+frontend/dist
+npm-debug.log*
+
+# Python
+backend/.venv
+__pycache__
+**/__pycache__
+*.pyc
+.pytest_cache
+
+# Local secrets — never into an image
+backend/.env
+.env
+*.env.local
+
+# Local runtime data & user media (untracked, large, machine-specific)
+backend/uploads
+backend/data.json
+backend/data.json.tmp
+backend/python
+
+# Tooling caches / logs
+.vite
+*.log
