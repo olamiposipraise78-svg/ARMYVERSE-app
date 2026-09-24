@@ -26,6 +26,7 @@ from app.core.config import get_settings
 from app.models import (
     Comment,
     Follow,
+    GameProgress,
     Like,
     Notification,
     Post,
@@ -71,6 +72,7 @@ class AstraRepository(Repository):
         self.reel_saves = self.database.get_collection("reel_saves")
         self.reel_comments = self.database.get_collection("reel_comments")
         self.reel_views = self.database.get_collection("reel_views")
+        self.game_progress = self.database.get_collection("game_progress")
 
     # ---------------- helpers ----------------
     @staticmethod
@@ -86,7 +88,7 @@ class AstraRepository(Repository):
 
     # ---------------- users ----------------
     def create_user(self, user: User) -> User:
-        self.users.insert_one(self._doc(user))
+        self.users.insert_one({"_id": user.id, **self._doc(user)})
         return user
 
     def get_user_by_id(self, user_id: str) -> Optional[User]:
@@ -112,21 +114,19 @@ class AstraRepository(Repository):
         return [self._from_doc(User, d) for d in docs]
 
     def search_users(self, query: str, limit: int, offset: int) -> list[User]:
-        docs = self.users.find(
-            {
-                "$or": [
-                    {"username": {"$regex": query, "$options": "i"}},
-                    {"display_name": {"$regex": query, "$options": "i"}},
-                ]
-            },
-            skip=offset,
-            limit=limit,
-        )
-        return [self._from_doc(User, d) for d in docs]
+        q = query.lower()
+        docs = self.users.find(sort={"created_at": -1}, limit=10000)
+        matches = [
+            self._from_doc(User, d)
+            for d in docs
+            if q in d.get("username", "").lower()
+            or q in d.get("display_name", "").lower()
+        ]
+        return matches[offset : offset + limit]
 
     # ---------------- posts ----------------
     def create_post(self, post: Post) -> Post:
-        self.posts.insert_one(self._doc(post))
+        self.posts.insert_one({"_id": post.id, **self._doc(post)})
         return post
 
     def get_post(self, post_id: str) -> Optional[Post]:
@@ -165,18 +165,15 @@ class AstraRepository(Repository):
         return [self._from_doc(Post, d) for d in docs]
 
     def search_posts(self, query: str, limit: int, offset: int) -> list[Post]:
-        docs = self.posts.find(
-            {
-                "$or": [
-                    {"caption": {"$regex": query, "$options": "i"}},
-                    {"hashtags": {"$regex": query, "$options": "i"}},
-                ]
-            },
-            skip=offset,
-            limit=limit,
-            sort={"created_at": -1},
-        )
-        return [self._from_doc(Post, d) for d in docs]
+        q = query.lower()
+        docs = self.posts.find(sort={"created_at": -1}, limit=10000)
+        matches = [
+            self._from_doc(Post, d)
+            for d in docs
+            if q in d.get("caption", "").lower()
+            or any(q in str(h).lower() for h in d.get("hashtags", []) or [])
+        ]
+        return matches[offset : offset + limit]
 
     def increment_post_like_count(self, post_id: str, delta: int = 1) -> None:
         self.posts.update_one(
@@ -217,7 +214,7 @@ class AstraRepository(Repository):
 
     # ---------------- comments ----------------
     def create_comment(self, comment: Comment) -> Comment:
-        self.comments.insert_one(self._doc(comment))
+        self.comments.insert_one({"_id": comment.id, **self._doc(comment)})
         return comment
 
     def get_comment(self, comment_id: str) -> Optional[Comment]:
@@ -260,24 +257,26 @@ class AstraRepository(Repository):
     def list_followers(
         self, user_id: str, limit: int = 20, offset: int = 0
     ) -> list[str]:
-        docs = self.follows.find(
-            {"followed_id": user_id},
-            projection={"follower_id": 1},
-            skip=offset,
-            limit=limit,
-        )
-        return [d["follower_id"] for d in docs]
+        ids = [
+            d["follower_id"]
+            for d in self.follows.find(
+                projection={"follower_id": 1, "followed_id": 1}
+            )
+            if d.get("followed_id") == user_id
+        ]
+        return ids[offset : offset + limit]
 
     def list_following(
         self, user_id: str, limit: int = 20, offset: int = 0
     ) -> list[str]:
-        docs = self.follows.find(
-            {"follower_id": user_id},
-            projection={"followed_id": 1},
-            skip=offset,
-            limit=limit,
-        )
-        return [d["followed_id"] for d in docs]
+        ids = [
+            d["followed_id"]
+            for d in self.follows.find(
+                projection={"follower_id": 1, "followed_id": 1}
+            )
+            if d.get("follower_id") == user_id
+        ]
+        return ids[offset : offset + limit]
 
     def list_following_ids(self, user_id: str) -> list[str]:
         docs = self.follows.find(
@@ -323,7 +322,7 @@ class AstraRepository(Repository):
 
     # ---------------- notifications ----------------
     def create_notification(self, notification: Notification) -> Notification:
-        self.notifications.insert_one(self._doc(notification))
+        self.notifications.insert_one({"_id": notification.id, **self._doc(notification)})
         return notification
 
     def get_notification(self, notification_id: str) -> Optional[Notification]:
@@ -333,13 +332,13 @@ class AstraRepository(Repository):
     def list_notifications(
         self, user_id: str, limit: int = 20, offset: int = 0
     ) -> list[Notification]:
-        docs = self.notifications.find(
-            {"user_id": user_id},
-            skip=offset,
-            limit=limit,
-            sort={"created_at": -1},
-        )
-        return [self._from_doc(Notification, d) for d in docs]
+        matches = [
+            self._from_doc(Notification, d)
+            for d in self.notifications.find()
+            if d.get("user_id") == user_id
+        ]
+        matches.sort(key=lambda n: n.created_at, reverse=True)
+        return matches[offset : offset + limit]
 
     def mark_notification_read(
         self, notification_id: str
@@ -350,21 +349,33 @@ class AstraRepository(Repository):
         return self.get_notification(notification_id)
 
     def mark_all_notifications_read(self, user_id: str) -> int:
-        result = self.notifications.update_many(
-            {"user_id": user_id, "read": False}, {"$set": {"read": True}}
-        )
-        return int(getattr(result, "modified_count", result) or 0)
+        rows = [
+            d
+            for d in self.notifications.find(
+                projection={"user_id": 1, "read": 1}
+            )
+            if d.get("user_id") == user_id and d.get("read") is False
+        ]
+        for row in rows:
+            self.notifications.update_one(
+                {"_id": row["_id"]}, {"$set": {"read": True}}
+            )
+        return len(rows)
 
     def count_unread_notifications(self, user_id: str) -> int:
-        return int(
-            self.notifications.count_documents(
-                {"user_id": user_id, "read": False}
-            )
+        return len(
+            [
+                d
+                for d in self.notifications.find(
+                    projection={"user_id": 1, "read": 1}
+                )
+                if d.get("user_id") == user_id and d.get("read") is False
+            ]
         )
 
     # ---------------- stories ----------------
     def create_story(self, story: Story) -> Story:
-        self.stories.insert_one(self._doc(story))
+        self.stories.insert_one({"_id": story.id, **self._doc(story)})
         return story
 
     def get_story(self, story_id: str) -> Optional[Story]:
@@ -432,7 +443,7 @@ class AstraRepository(Repository):
 
     # ---------------- story replies ----------------
     def create_story_reply(self, reply: StoryReply) -> StoryReply:
-        self.story_replies.insert_one(self._doc(reply))
+        self.story_replies.insert_one({"_id": reply.id, **self._doc(reply)})
         return reply
 
     def list_story_replies(
@@ -448,7 +459,7 @@ class AstraRepository(Repository):
 
     # ---------------- reels ----------------
     def create_reel(self, reel: Reel) -> Reel:
-        self.reels.insert_one(self._doc(reel))
+        self.reels.insert_one({"_id": reel.id, **self._doc(reel)})
         return reel
 
     def get_reel(self, reel_id: str) -> Optional[Reel]:
@@ -457,10 +468,19 @@ class AstraRepository(Repository):
 
     def delete_reel(self, reel_id: str) -> None:
         self.reels.delete_one({"_id": reel_id})
-        self.reel_likes.delete_many({"reel_id": reel_id})
-        self.reel_saves.delete_many({"reel_id": reel_id})
-        self.reel_comments.delete_many({"reel_id": reel_id})
-        self.reel_views.delete_many({"reel_id": reel_id})
+        for col in (
+            self.reel_likes,
+            self.reel_saves,
+            self.reel_comments,
+            self.reel_views,
+        ):
+            ids = [
+                d["_id"]
+                for d in col.find(projection={"_id": 1})
+                if d.get("reel_id") == reel_id
+            ]
+            for row_id in ids:
+                col.delete_one({"_id": row_id})
 
     def list_reels(self, limit: int = 20, offset: int = 0) -> list[Reel]:
         docs = self.reels.find(skip=offset, limit=limit, sort={"created_at": -1})
@@ -474,6 +494,19 @@ class AstraRepository(Repository):
 
     def increment_reel_field(self, reel_id: str, field: str, delta: int = 1) -> None:
         self.reels.update_one({"_id": reel_id}, {"$inc": {field: delta}})
+
+    # ---------------- game progress ----------------
+    def get_game_progress(self, user_id: str) -> Optional[GameProgress]:
+        doc = self.game_progress.find_one({"_id": user_id})
+        return self._from_doc(GameProgress, doc) if doc else None
+
+    def upsert_game_progress(self, progress: GameProgress) -> GameProgress:
+        self.game_progress.update_one(
+            {"_id": progress.user_id},
+            {"$set": self._doc(progress)},
+            upsert=True,
+        )
+        return progress
 
     # ---------------- reel likes ----------------
     def add_reel_like(self, like: ReelLike) -> bool:
@@ -494,8 +527,11 @@ class AstraRepository(Repository):
         return self.reel_likes.find_one({"_id": key}) is not None
 
     def list_liked_reel_ids(self, user_id: str) -> set[str]:
-        docs = self.reel_likes.find({"user_id": user_id}, projection={"reel_id": 1})
-        return {d["reel_id"] for d in docs}
+        return {
+            d["reel_id"]
+            for d in self.reel_likes.find(projection={"reel_id": 1, "user_id": 1})
+            if d.get("user_id") == user_id
+        }
 
     # ---------------- reel saves ----------------
     def add_reel_save(self, save: ReelSave) -> bool:
@@ -516,14 +552,19 @@ class AstraRepository(Repository):
         return self.reel_saves.find_one({"_id": key}) is not None
 
     def list_saved_reel_ids(self, user_id: str) -> list[str]:
-        docs = self.reel_saves.find(
-            {"user_id": user_id}, projection={"reel_id": 1}, sort={"created_at": -1}
-        )
-        return [d["reel_id"] for d in docs]
+        matches = [
+            d
+            for d in self.reel_saves.find(
+                projection={"reel_id": 1, "user_id": 1, "created_at": 1}
+            )
+            if d.get("user_id") == user_id
+        ]
+        matches.sort(key=lambda d: d.get("created_at", ""), reverse=True)
+        return [d["reel_id"] for d in matches]
 
     # ---------------- reel comments ----------------
     def create_reel_comment(self, comment: ReelComment) -> ReelComment:
-        self.reel_comments.insert_one(self._doc(comment))
+        self.reel_comments.insert_one({"_id": comment.id, **self._doc(comment)})
         return comment
 
     def get_reel_comment(self, comment_id: str) -> Optional[ReelComment]:
@@ -535,10 +576,13 @@ class AstraRepository(Repository):
         return bool(getattr(result, "deleted_count", result) > 0)
 
     def list_reel_comments(self, reel_id: str, limit: int = 20, offset: int = 0) -> list[ReelComment]:
-        docs = self.reel_comments.find(
-            {"reel_id": reel_id}, skip=offset, limit=limit, sort={"created_at": -1}
-        )
-        return [self._from_doc(ReelComment, d) for d in docs]
+        matches = [
+            self._from_doc(ReelComment, d)
+            for d in self.reel_comments.find()
+            if d.get("reel_id") == reel_id
+        ]
+        matches.sort(key=lambda c: c.created_at, reverse=True)
+        return matches[offset : offset + limit]
 
     # ---------------- reel views ----------------
     def add_reel_view(self, view: ReelView) -> bool:

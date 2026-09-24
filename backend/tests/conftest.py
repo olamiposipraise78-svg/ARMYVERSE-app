@@ -11,6 +11,10 @@ os.environ["RATE_LIMIT_ENABLED"] = "false"
 os.environ["RATELIMIT_ENABLED"] = "false"
 # Disable MemoryRepository file persistence so tests stay isolated in memory.
 os.environ["ARMYVERSE_DATA_FILE"] = ""
+# Force the in-memory repository for tests regardless of local .env values,
+# so the suite never connects to or writes to a real Astra DB.
+os.environ["ASTRA_DB_API_ENDPOINT"] = ""
+os.environ["ASTRA_DB_APPLICATION_TOKEN"] = ""
 
 import pytest
 from fastapi.testclient import TestClient
