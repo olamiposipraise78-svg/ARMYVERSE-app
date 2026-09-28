@@ -27,7 +27,10 @@ from app.serializers.frontend import user_to_frontend
 def register(
     repo: Repository, payload: RegisterRequest
 ) -> dict:
-    username = payload.username.strip()
+    # Usernames are stored lowercase so they stay symmetric with login(),
+    # which lowercases the identifier before lookup. Astra lookups are
+    # case-sensitive, so this is what makes a mixed-case signup reachable.
+    username = payload.username.strip().lower()
     email = payload.email.strip().lower()
 
     if repo.get_user_by_username(username):
@@ -39,7 +42,7 @@ def register(
         username=username,
         email=email,
         password_hash=hash_password(payload.password),
-        display_name=payload.display_name.strip() or username,
+        display_name=payload.display_name.strip() or payload.username.strip(),
         bio=payload.bio.strip(),
         country=payload.country.strip(),
     )
