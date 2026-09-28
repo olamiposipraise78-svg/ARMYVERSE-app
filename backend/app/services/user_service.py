@@ -43,7 +43,9 @@ def update_profile(
     if not updates:
         raise BadRequestError("Nothing to update.")
 
-    updates["updated_at"] = datetime.now(timezone.utc)
+    # Stored as an ISO string: the repository writes to a JSON-only document
+    # store, which cannot represent a raw datetime.
+    updates["updated_at"] = datetime.now(timezone.utc).isoformat()
     updated = repo.update_user(user_id, updates)
     return user_to_frontend(updated, is_current=True)
 

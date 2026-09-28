@@ -20,7 +20,8 @@ duplicate-insert prevention a natural part of the data model.
 
 from __future__ import annotations
 
-from typing import Optional
+from datetime import datetime, timezone
+from typing import Any, Optional
 
 from app.core.config import get_settings
 from app.models import (
@@ -599,11 +600,46 @@ class AstraRepository(Repository):
 
     # ---------------- serialisation helper ----------------
     @staticmethod
+    def _parse_dt(value: Any) -> Optional[datetime]:
+        """Rebuild a datetime from a value read back out of the Data API.
+
+        The Data API is JSON-only, so `_doc` writes datetimes out as ISO
+        strings. Dataclasses do not enforce their annotations, so without this
+        the raw string would flow straight into the models and break anything
+        that expects a real datetime (serializers, story expiry comparisons,
+        datetime-vs-datetime sorting).
+
+        Naive timestamps are stamped as UTC to match the convention used by
+        `iso_fmt` and by `now_utc()`, so comparisons stay type-compatible.
+        """
+        if isinstance(value, datetime):
+            return value
+        if not isinstance(value, str):
+            return None
+        try:
+            parsed = datetime.fromisoformat(value)
+        except ValueError:
+            return None
+        return parsed if parsed.tzinfo else parsed.replace(tzinfo=timezone.utc)
+
+    @staticmethod
     def _from_doc(model_cls, doc: dict):
         if not doc:
             return None
         data = dict(doc)
         data.pop("_id", None)
+        # `entity.py` uses `from __future__ import annotations`, so dataclass
+        # field types are annotation strings rather than the datetime class.
+        for name, spec in model_cls.__dataclass_fields__.items():
+            if spec.type != "datetime" or name not in data:
+                continue
+            parsed = AstraRepository._parse_dt(data[name])
+            if parsed is None:
+                # Never let a raw string land in a datetime field: drop the key
+                # so the model's own default applies instead.
+                data.pop(name)
+            else:
+                data[name] = parsed
         return model_cls(**data)
 
 

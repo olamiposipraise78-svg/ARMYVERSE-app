@@ -27,9 +27,16 @@ from app.models import (
 )
 
 
-def iso_fmt(value: datetime | None) -> str:
+def iso_fmt(value: datetime | str | None) -> str:
+    """Render a timestamp as an ISO string.
+
+    Repositories that persist to a JSON-only store (Astra) hand back ISO
+    strings, so tolerate those rather than assuming a datetime and raising.
+    """
     if value is None:
         return ""
+    if isinstance(value, str):
+        return value
     if value.tzinfo is None:
         value = value.replace(tzinfo=timezone.utc)
     return value.isoformat()
